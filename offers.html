@@ -46,12 +46,12 @@
                         </div>
         
                         <!-- Any Cabin Class Input -->
-                        <div class="col-5">
+                        <div class="col-6">
                             <input type="text" class="form-control any-cabin-class-input" placeholder="Any Cabin Class">
                         </div>
         
                         <!-- Submit Button -->
-                        <div class="col-2">
+                        <div class="col-1 text-end">
                             <button class="btn btn-info">
                                 <!-- Pencil (Edit) Icon SVG -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -66,7 +66,7 @@
 
         <!-- Offer Main Content -->
         <div class="row">
-            <div class="col-md-10 col-12 offset-md-1">
+            <div class="col-lg-10 col-12 offset-lg-1">
                 <section class="text-center my-4">
                     <div id="offer-content">
                         <!-- Offer Header -->
@@ -112,11 +112,10 @@
                                     </div>
 
                                     <!-- Offer Form -->
-                                    <div id="offer-form-container" class="p-3">
+                                    <!-- <div id="offer-form-container" class="p-3">
                                         <form>
                                             <div class="row mx-0">
                                                 <div class="my-2 px-2 col-md-6 col-12">
-                                                    <!-- Form Input -->
                                                     <div class="offer-input-base w-100" autocomplete="name">
                                                         <label for="input-name">Name*</label>
 
@@ -130,6 +129,34 @@
                                                             </fieldset>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div> -->
+
+                                    <div id="offer-form-container" class="p-3">
+                                        <form action="">
+                                            <div class="row text-start">
+                                                <div class="col-6 my-2">
+                                                    <div class="field">
+                                                        <label for="customer-name">Name *</label>
+                                                        <input type="text" name="customer-name" class="form-control p-3" id="customer-name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 my-2">
+                                                    <div class="field">
+                                                        <label for="customer-email">Email Address *</label>
+                                                        <input type="text" name="customer-email" class="form-control p-3" id="customer-email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 my-2">
+                                                    <div class="field">
+                                                        <label for="customer-phone">Phone Number *</label>
+                                                        <input type="tel" name="customer-phone" class="form-control p-3" id="customer-phone">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="btn call-now w-100 mt-3 py-2 fs-4 text-uppercase">Call me now</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -166,25 +193,28 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
-        jQuery(document).on('focus', '.offer-input-container input', function(e)
+        jQuery(document).on('focus', '.field input', function(e)
         {
             let input    = jQuery(this)
             let parent   = input.parent()
-            let label    = parent.prev()
+            let label    = parent.find("label")
             let fieldset = input.next()
 
-            label.addClass('focused').data('shrink', 'true')
-            fieldset.find('legend').addClass('focused')
+            console.log(input);
+
+            parent.addClass('focused').data('shrink', 'true')
+            //fieldset.find('legend').addClass('focused')
         })
-        jQuery(document).on('focusout', '.offer-input-container input', function(e)
+        jQuery(document).on('focusout', '.field input', function(e)
         {
             let input    = jQuery(this)
             let parent   = input.parent()
-            let label    = parent.prev()
+            let label    = parent.find("label")
             let fieldset = input.next()
 
-            label.removeClass('focused').data('shrink', 'false')
-            fieldset.find('legend').removeClass('focused')
+            parent.removeClass('focused').data('shrink', 'false')
+
+            //fieldset.find('legend').removeClass('focused')
         })
     </script>
 </body>

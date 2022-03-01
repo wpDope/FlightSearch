@@ -34,13 +34,25 @@ body::after {
     cursor: pointer;
 }
 
+#top-search button.btn-info {
+    background-color: var(--color-orange);
+    border: 0;
+    color: var(--color-white);
+}
+
+#top-search button.btn-info svg {
+    margin-top: -4px;
+}
+
 #offer-content {
-    border: 2px dashed var(--color-green);
     font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #0009;
 }
 
 #offer-header {
     background-color: var(--color-green);
+    border-radius: 5px 5px 0px 0;
 }
 
 #offer-caption {
@@ -58,6 +70,7 @@ body::after {
 
 #offer-inner {
     background-color: var(--color-white);
+    border-radius: 0 0 5px 5px;
 }
 
 #offer-call-avatar {
@@ -163,6 +176,38 @@ body::after {
     overflow: visible;
     outline: none;
 }
+/*Style by shoyeb*/
+button.btn.call-now {
+    color: var(--color-white);
+    background: #5eb855;
+}
+
+.field{
+    position: relative;
+}
+
+.field label {
+    position: absolute;
+    color: #707070;
+    font-size: 14px;
+    font-weight: 100;
+    left: 18px;
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+
+.field.focused label {
+    top: 0;
+    background: var(--color-white);
+    padding: 2px 10px;
+}
+
+.field.focused input {
+    border-color: transparent;
+    outline: 2px solid var(--color-blue);
+}
+
+/*Style by shoyeb*/
 .offer-input-container > fieldset {
     top: -5px;
     left: 0;

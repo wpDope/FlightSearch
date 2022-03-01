@@ -50,6 +50,9 @@ header{
 header .header-phone{
     color: var(--color-black);
 }
+header .header-phone svg {
+    margin-top: -2px;
+}
 
 /*
 Search Tav navigation
