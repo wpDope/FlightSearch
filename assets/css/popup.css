@@ -7,6 +7,9 @@
     --full-width: 100%;
 }
 
+.select2-container .select2-dropdown{
+    z-index: 1056;
+}
 .lead-modal .modal-dialog,
 .flight-modal .modal-dialog {
     max-width: 50rem;
