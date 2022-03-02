@@ -28,7 +28,7 @@
 
 <body class="bg offer-page">
 
-    <section id="travel-search" style="display: none;">
+    <section id="main-page">
 
         <header class="header">
             <div class="container">
@@ -138,7 +138,7 @@
 
                                         <h2 class="flight-search-title fs-1 fw-normal">Search Flights</h2>
 
-                                        <form class="flight-search" action="" method="get">
+                                        <form id="flight-search" class="flight-search" action="" method="get">
 
                                             <div class="row mt-4">
 
@@ -149,7 +149,7 @@
                                                     <div class="field airlines">
                                                         <select class="form-control p-2 select2" name="airlines"
                                                             id="select-airlines">
-                                                            <option value="">Any Airlines</option>
+                                                            <option value="" selected>Any Airlines</option>
                                                             <option value="QatarAirways">Qatar Airways</option>
                                                             <option value="SingaporeAirlines">Singapore Airlines
                                                             </option>
@@ -174,9 +174,9 @@
                                                         Class</label>
 
                                                     <div class="field cabin-class">
-                                                        <select class="form-control p-2 select2" name="cabin-class"
+                                                        <select class="form-control p-2 select2" name="cabinclass"
                                                             id="select-cabinclass">
-                                                            <option value="">Any Class</option>
+                                                            <option value="" selected>Any Class</option>
                                                             <option value="Economic">Economic</option>
                                                             <option value="Premium">Premium</option>
                                                             <option value="Delux">Delux</option>
@@ -195,7 +195,7 @@
 
                                             </div>
 
-                                            ;'\/-0<button class="btn px-4 py-2 my-4 fs-4 fw-bold searchBtn">
+                                            <button class="btn px-4 py-2 my-4 fs-4 fw-bold searchBtn">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                     fill="currentColor" viewBox="0 0 16 16">
                                                     <path
@@ -225,9 +225,9 @@
 
         </div><!-- .flight-search -->
 
-    </section><!-- #travel-search -->
+    </section><!-- #main-page -->
 
-    <section id="offer">
+    <section id="offer-page" style="display: none;">
         <div class="container">
             <!-- Offer Page Top Search -->
             <div class="row">
@@ -236,12 +236,12 @@
                         <div class="row mt-4">
                             <!-- Any Flight Input -->
                             <div class="col-5">
-                                <input type="text" class="form-control any-flight-input" placeholder="Any Flight">
+                                <input type="text" class="form-control airlines-name" placeholder="Any Airlines">
                             </div>
 
                             <!-- Any Cabin Class Input -->
                             <div class="col-6">
-                                <input type="text" class="form-control any-cabin-class-input"
+                                <input type="text" class="form-control cabinclass-name"
                                     placeholder="Any Cabin Class">
                             </div>
 
@@ -268,14 +268,14 @@
                         <div id="offer-content">
                             <!-- Offer Header -->
                             <div id="offer-header" class="text-center text-white">
-                                <h5 class="pt-3">Deals Found For Cruises To</h5>
-                                <h2>Any Destination</h2>
-                                <h5 class="m-0 pb-2">Any Time</h5>
+                                <h5 class="pt-3">Deals Found For Flights From</h5>
+                                <h2 class="airlines-name">Any Airlines</h2>
+                                <h5 class="m-0 pb-2 cabinclass-name-full">Any Cabin Class</h5>
                             </div>
 
                             <!-- Offer Caption -->
                             <div id="offer-caption" class="text-center">
-                                <h3 class="py-2 m-0 text-uppercase">Unpublished Cruise Deals</h3>
+                                <h3 class="py-2 m-0 text-uppercase">Unpublished Flight Deals</h3>
                                 <h1 class="m-0 pb-5 pt-1 text-uppercase">Call Only Deals!</h1>
                             </div>
 
@@ -296,11 +296,9 @@
                                         <!-- Call Features -->
                                         <div class="offer-call-features">
                                             <ul class="px-5 d-inline-block d-none d-md-block text-start feature-list">
-                                                <li>Guaranteed Cheap Prices to <span class="text-red">Any
-                                                        Destination</span>
-                                                </li>
+                                                <li>Guaranteed Cheap Prices from <span class="text-red airlines-name">Any Airlines</span></li>
                                                 <li>Call Waiting Time: <span class="text-red">Near Zero</span></li>
-                                                <li>All Cruise Lines</li>
+                                                <li>All Flights by <span class="text-red airlines-name">Any Airlines</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -309,35 +307,12 @@
                                         <!-- Offer Above Form Content -->
                                         <div id="offer-form-above"
                                             class="d-flex flex-column justify-content-center p-3">
-                                            <div>Request Callback for Cheap Cruise Prices to Any Destination</div>
+                                            <div>Request Callback for Cheap Flights Prices to <span class="airlines-name">Any Airlines</span></div>
                                             <div class="text-red">We Call You in 1 Minute</div>
                                         </div>
 
-                                        <!-- Offer Form -->
-                                        <!-- <div id="offer-form-container" class="p-3">
-                                            <form>
-                                                <div class="row mx-0">
-                                                    <div class="my-2 px-2 col-md-6 col-12">
-                                                        <div class="offer-input-base w-100" autocomplete="name">
-                                                            <label for="input-name">Name*</label>
-    
-                                                            <div class="offer-input-container">
-                                                                <input aria-invalid="false" id="input-name" type="text" autocomplete="name">
-    
-                                                                <fieldset aria-hidden="true">
-                                                                    <legend>
-                                                                        <span>Name*</span>
-                                                                    </legend>
-                                                                </fieldset>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div> -->
-
                                         <div id="offer-form-container" class="p-3">
-                                            <form action="">
+                                            <form id="lead-onpage" action="">
                                                 <div class="row text-start">
                                                     <div class="col-6 my-2">
                                                         <div class="field">
@@ -362,9 +337,7 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <button
-                                                            class="btn call-now w-100 mt-3 py-2 fs-4 text-uppercase">Call
-                                                            me
-                                                            now</button>
+                                                            class="btn call-now w-100 mt-3 py-2 fs-4 text-uppercase">Call me now</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -373,11 +346,9 @@
                                         <!-- Call Features -->
                                         <div class="offer-call-features">
                                             <ul class="px-5 d-inline-block d-sm-none text-start feature-list">
-                                                <li>Guaranteed Cheap Prices to <span class="text-red">Any
-                                                        Destination</span>
-                                                </li>
+                                                <li>Guaranteed Cheap Prices from <span class="text-red airlines-name">Any Airlines</span></li>
                                                 <li>Call Waiting Time: <span class="text-red">Near Zero</span></li>
-                                                <li>All Cruise Lines</li>
+                                                <li>All Flights by <span class="text-red airlines-name">Any Airlines</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -388,11 +359,11 @@
                 </div>
             </div>
         </div>
-    </section><!-- #offer -->
+    </section><!-- #offer-page -->
 
-    <section id="popup">
+    <section id="popup" style="display: none;">
 
-        <div class="flight-search">
+        <div class="flight-popup">
             <div class="container">
 
                 <!-- Search Bar Modal -->
@@ -458,70 +429,72 @@
                             data-bs-target="#collectLeadModal">
                             Collect Lead
                         </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="collectLeadModal" tabindex="-1"
-                            aria-labelledby="collectLeadModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <div class="modal-header--left text-center">
-                                            <span class="text-red h5">Time Is Running Out: 03:16</span>
-                                            <h5 class="modal-title" id="collectLeadModalLabel">Exclusive Deals For
-                                                {Dynamic Data} Anytime
-                                            </h5>
-                                        </div>
-                                        <div class="modal-header--right">
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p class="text-center">Our VIP concierge team is available now. We have garunted
-                                            {Dynamic Data}. We
-                                            call you in just 1 minute</p>
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-12 my-2">
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" placeholder="Name*"
-                                                        aria-label="Name*" aria-describedby="basic-addon1">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12 my-2">
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" placeholder="Email*"
-                                                        aria-label="Email*" aria-describedby="basic-addon1">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 my-2">
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" placeholder="Phone Number*"
-                                                        aria-label="Phone Number*" aria-describedby="basic-addon1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn px-4 py-2 my-4 fs-4 fw-bold searchBtn w-100">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                                            </svg>
-
-                                            <span>Call Me Now</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <!-- Modal: Collect Lead -->
+    <div class="modal fade" id="collectLeadModal" tabindex="-1"
+    aria-labelledby="collectLeadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--left text-center">
+                        <span class="text-red h5">Time Is Running Out: 03:16</span>
+                        <h5 class="modal-title" id="collectLeadModalLabel">Exclusive Deals For
+                            Flights from <span class="airlines-name">Any Airlines</span> In Any Time
+                        </h5>
+                    </div>
+                    <div class="modal-header--right">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Our VIP concierge team is available now. We have guaranteed cheap prices for
+                        flights from <span class="airlines-name">any airlines</span>. We call you in just 1 minute</p>
+                    
+                    <div class="row text-start">
+                        <div class="col-6 my-2">
+                            <div class="field">
+                                <label for="customer-name">Name *</label>
+                                <input type="text" name="customer-name"
+                                    class="form-control p-3" id="customer-name">
+                            </div>
+                        </div>
+                        <div class="col-6 my-2">
+                            <div class="field">
+                                <label for="customer-email">Email Address *</label>
+                                <input type="text" name="customer-email"
+                                    class="form-control p-3" id="customer-email">
+                            </div>
+                        </div>
+                        <div class="col-6 my-2">
+                            <div class="field">
+                                <label for="customer-phone">Phone Number *</label>
+                                <input type="tel" name="customer-phone"
+                                    class="form-control p-3" id="customer-phone">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn px-4 py-2 my-4 fs-4 fw-bold searchBtn w-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                            <path
+                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+
+                        <span>Call Me Now</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -536,11 +509,107 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+    <!-- This will go inside main.js later -->
+    <script>
+        jQuery(document).ready(() => {
+            // Active select 2 fields
+            jQuery('.select2').select2({})
+
+            // Animate input fields
+            jQuery(document).on('focus', '.field input', function() {
+                let input    = jQuery(this)
+                let parent   = input.parent()
+
+                parent.addClass('focused')
+            })
+            jQuery(document).on('focusout', '.field input', function() {
+                let input    = jQuery(this)
+                let parent   = input.parent()
+
+                parent.removeClass('focused')
+            })
+            
+            // Main Page Form Submission
+            jQuery('form#flight-search').on('submit', function(e) {
+                e.preventDefault()
+
+                // Getting the select elements
+                let airlines   = jQuery(this).find('select[name="airlines"]')
+                let cabinclass = jQuery(this).find('select[name="cabinclass"]')
+
+                // Getting the user selections
+                let values = {
+                    airlines: airlines.val(),
+                    cabinclass: cabinclass.val()
+                }
+
+                // Getting the visual text for the selections
+                let labels = {
+                    airlines: airlines.find(':selected').text(),
+                    cabinclass: cabinclass.find(':selected').text()
+                }
+
+                // Checking if selection is empty
+                if ( values.airlines.length == 0 || values.cabinclass.length == 0 )
+                    return
+
+                // Updating content of offer page
+                jQuery('input.airlines-name').val( labels.airlines )
+                jQuery('.airlines-name:not(input)').text( labels.airlines )
+
+                jQuery('input.cabinclass-name').val( labels.cabinclass )
+                jQuery('.cabinclass-name:not(input)').text( labels.cabinclass )
+
+                jQuery('input.cabinclass-name-full').val( `${labels.cabinclass} Cabin Class` )
+                jQuery('.cabinclass-name-full:not(input)').text( `${labels.cabinclass} Cabin Class` )
+
+                // Showing the offer page
+                jQuery('#main-page').hide()
+                jQuery('#offer-page').show()
+                
+                // Changing the page title
+                document.title = 'Offers'
+
+                // Updating the url
+                window.history.pushState('offer-page',"", `offers?airlines=${values.airlines}&cabin=${values.cabinclass}`)
+
+                setTimeout( () => {
+                    jQuery('#collectLeadModal').modal('show')
+                }, 5000 )
+
+                return
+            })
+
+            // Offer Page Form and Modal Form Interchange Data
+            let leadFormPage = jQuery('form#lead-onpage'),
+                leadFormModal = jQuery('#collectLeadModal')
+
+            al_interchange( leadFormPage, leadFormModal )
+            al_interchange( leadFormModal, leadFormPage )
+
+            function al_interchange( firstform, secondform )
+            {
+                firstform
+                    .find('input[name="customer-name"]')
+                    .on('change', function() {
+                        let name = jQuery(this).val()
+                        secondform.find('input[name="customer-name"]').val( name )
+                    })
+                .end()
+                    .find('input[name="customer-email"]')
+                    .on('change', function() {
+                        let email = jQuery(this).val()
+                        secondform.find('input[name="customer-email"]').val( email )
+                    })
+                .end()
+                    .find('input[name="customer-phone"]')
+                    .on('change', function() {
+                        let phone = jQuery(this).val()
+                        secondform.find('input[name="customer-phone"]').val( phone )
+                    })
+            }
+        })
+    </script>
 </body>
 
 </html>
