@@ -122,21 +122,28 @@ Search Tav navigation
 /*
 Flight search form
 */
-.flight-search label{
+/*
+Flight search form
+*/
+.flight-search label,
+.modal-footer label{
     color: var(--color-white);
 }
 
+.modal-footer .searchBtn,
 .flight-search .searchBtn{
     border: 0;
     background-color: var(--color-yellow);
     color: var(--color-black);
 }
 
+.modal-footer .searchBtn:hover,
 .flight-search .searchBtn:hover{
     background-color: var(--color-blue);
     color: var(--color-white);
 }
 
+.modal-footer .searchBtn svg,
 .flight-search .searchBtn svg {
     margin-top: -4px;
     margin-right: 5px;
@@ -418,24 +425,23 @@ Popup Bar
 .select2-container .select2-dropdown{
     z-index: 1056;
 }
-.lead-modal .modal-dialog,
-.flight-modal .modal-dialog {
-    max-width: 50rem;
-    margin: 20rem auto;
+#collectLeadModal .modal-dialog,
+#flightSearchModal .modal-dialog {
+    /* max-width: 50rem; */
 }
-.lead-modal .modal-body,
-.flight-modal .modal-body {
+#collectLeadModal .modal-body,
+#flightSearchModal .modal-body {
     padding: 2rem;
 }
-.lead-modal .modal-footer .btn-lg,
-.flight-modal .modal-footer .btn-lg{
+#collectLeadModal .modal-footer .btn-lg,
+#flightSearchModal .modal-footer .btn-lg{
     width: var( --full-width );
 }
-.lead-modal .modal-header .modal-header--right{
+#collectLeadModal .modal-header .modal-header--right{
     width: 10%;
     text-align: right;
 }
-.lead-modal .modal-header .modal-header--left{
+#collectLeadModal .modal-header .modal-header--left{
     width: 90%;
 }
 
