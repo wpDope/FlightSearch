@@ -138,7 +138,7 @@
 
                                         <h2 class="flight-search-title fs-1 fw-normal">Search Flights</h2>
 
-                                        <form id="flight-search" class="flight-search" action="" method="get">
+                                        <form class="flight-search" action="" method="get">
 
                                             <div class="row mt-4">
 
@@ -236,12 +236,13 @@
                         <div class="row mt-4">
                             <!-- Any Flight Input -->
                             <div class="col-5">
-                                <input type="text" class="form-control airlines-name" placeholder="Any Airlines">
+                                <input type="text" class="form-control ts-airlines airlines-name" placeholder="Any Airlines">
                             </div>
 
                             <!-- Any Cabin Class Input -->
                             <div class="col-6">
-                                <input type="text" class="form-control cabinclass-name" placeholder="Any Cabin Class">
+                                <input type="text" class="form-control ts-cabinclass cabinclass-name"
+                                    placeholder="Any Cabin Class">
                             </div>
 
                             <!-- Submit Button -->
@@ -371,45 +372,47 @@
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="flightSearchModalLabel">Search Cruises
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body row">
-                    <div class="col-md-6 col-sm-12 my-2">
-                        <select class="form-select form-select-lg" name="airlines" aria-label=".form-select-lg example">
-                            <option value="" selected>Any Airlines</option>
-                            <option value="QatarAirways">Qatar Airways</option>
-                            <option value="SingaporeAirlines">Singapore Airlines</option>
-                            <option value="ANAAllNipponAirways">ANA All Nippon Airways</option>
-                            <option value="Emirates">Emirates</option>
-                            <option value="JapanAirlines">Japan Airlines</option>
-                        </select>
+                <form class="flight-search" action="" method="get">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="flightSearchModalLabel">Search Cruises
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="col-md-6 col-sm-12 my-2">
-                        <select class="form-select form-select-lg" name="cabinclass"
-                            aria-label=".form-select-lg example">
-                            <option value="" selected>Any Class</option>
-                            <option value="Economic">Economic</option>
-                            <option value="Premium">Premium</option>
-                            <option value="Delux">Delux</option>
-                            <option value="vip">Vip</option>
-                        </select>
+                    <div class="modal-body row">
+                        <div class="col-md-6 col-sm-12 my-2">
+                            <select class="form-select form-select-lg" name="airlines" aria-label=".form-select-lg example">
+                                <option value="" selected>Any Airlines</option>
+                                <option value="QatarAirways">Qatar Airways</option>
+                                <option value="SingaporeAirlines">Singapore Airlines</option>
+                                <option value="ANAAllNipponAirways">ANA All Nippon Airways</option>
+                                <option value="Emirates">Emirates</option>
+                                <option value="JapanAirlines">Japan Airlines</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-12 my-2">
+                            <select class="form-select form-select-lg" name="cabinclass"
+                                aria-label=".form-select-lg example">
+                                <option value="" selected>Any Class</option>
+                                <option value="Economic">Economic</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Delux">Delux</option>
+                                <option value="vip">Vip</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn px-4 py-2 my-4 fs-4 fw-bold searchBtn w-100">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-                            </path>
-                        </svg>
+                    <div class="modal-footer">
+                        <button class="btn px-4 py-2 my-4 fs-4 fw-bold searchBtn w-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                </path>
+                            </svg>
 
-                        <span>Update Search</span>
-                    </button>
-                </div>
+                            <span>Update Search</span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -421,7 +424,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-header--left text-center">
-                        <span class="text-red h5">Time Is Running Out: 03:16</span>
+                        <span class="text-red h5">Time Is Running Out: <span class="dyn-minutes">00</span>:<span class="dyn-seconds">00</span></span>
                         <h5 class="modal-title" id="collectLeadModalLabel">Exclusive Deals For
                             Flights from <span class="airlines-name">Any Airlines</span> In Any Time
                         </h5>
@@ -486,17 +489,23 @@
 
     <!-- This will go inside main.js later -->
     <script>
-        const queries = new URLSearchParams(window.location.search)
-        const xquery = {
+        // Timer for the popup
+        const xtime       = 10; // in seconds
+        
+        const queries     = new URLSearchParams( window.location.search )
+        const xquery      = {
             page: queries.get('page'),
             airlines: queries.get('airlines'),
             cabin: queries.get('cabin')
         }
         const isOfferPage = xquery.page != null && xquery.airlines != null && xquery.cabin != null ? true : false
 
-        if (isOfferPage) {
-            jQuery('select[name="airlines"]').val(xquery.airlines)
-            jQuery('select[name="cabinclass"]').val(xquery.cabin)
+        var ytime = xtime, xtimeout, xinterval;
+
+        if ( isOfferPage )
+        {
+            jQuery('select[name="airlines"]').val( xquery.airlines )
+            jQuery('select[name="cabinclass"]').val( xquery.cabin )
         }
         else
             jQuery('#main-page').show()
@@ -520,8 +529,24 @@
             })
 
             // Main Page Form Submission
-            jQuery('form#flight-search').on('submit', function (e) {
+            jQuery('.flight-search').on('submit', function(e) {
                 e.preventDefault()
+
+                jQuery('#flightSearchModal, #collectLeadModal').modal('hide')
+                
+                ytime = xtime
+                
+                if ( xtimeout )
+                {
+                    clearTimeout( xtimeout )
+                    xtimeout = false
+                }
+                
+                if ( xinterval )
+                {
+                    clearInterval( xinterval )
+                    xinterval = false
+                }
 
                 // Getting the select elements
                 let airlines = jQuery(this).find('select[name="airlines"]')
@@ -538,10 +563,6 @@
                     airlines: airlines.find(':selected').text(),
                     cabinclass: cabinclass.find(':selected').text()
                 }
-
-                // Checking if selection is empty
-                // if ( values.airlines.length == 0 || values.cabinclass.length == 0 )
-                //     return
 
                 // Updating content of offer page
                 jQuery('input.airlines-name').val(labels.airlines)
@@ -563,22 +584,37 @@
                 // Updating the url
                 window.history.pushState('offer-page', '', `?page=offer&airlines=${values.airlines}&cabin=${values.cabinclass}`)
 
-                setTimeout(() => {
-                    jQuery('#collectLeadModal').modal('show')
-                }, 1000)
+                if ( ! xtimeout )
+                {
+                    xcalctimer();
+
+                    xtimeout = setTimeout( () => {
+                        jQuery('#collectLeadModal').modal('show')
+
+                        if ( ! xinterval )
+                            xinterval = setInterval( xcalctimer, 1000 )
+
+                        xtimeout = false;
+                    }, 1500 )
+                }
 
                 return
             })
 
+            // Offer Page Top Search Events
+            jQuery(document).on('click', '.ts-airlines, .ts-cabinclass', () => {
+                jQuery('#flightSearchModal').modal('show')
+            })
+            
             // Offer Page Form and Modal Form Interchange Data
-            let leadFormPage = jQuery('form#lead-onpage'),
+            let leadFormPage  = jQuery('form#lead-onpage'),
                 leadFormModal = jQuery('#collectLeadModal')
 
             al_interchange(leadFormPage, leadFormModal)
             al_interchange(leadFormModal, leadFormPage)
 
-            if (isOfferPage)
-                jQuery('form#flight-search').submit();
+            if ( isOfferPage )
+                jQuery('.flight-search').submit()
         })
 
         function al_interchange(firstform, secondform) {
@@ -600,6 +636,30 @@
                     let phone = jQuery(this).val()
                     secondform.find('input[name="customer-phone"]').val(phone)
                 })
+        }
+
+        function xcalctimer() {
+            let tmin = Math.floor( ytime / 60 )
+            let tsec = ytime - ( tmin * 60 )
+
+            jQuery('.dyn-minutes').text( tmin < 10 ? '0' + tmin.toString() : tmin.toString() )
+            jQuery('.dyn-seconds').text( tsec < 10 ? '0' + tsec.toString() : tsec.toString() )
+
+            ytime--
+
+            if ( ytime < 0 )
+            {
+                if ( xinterval )
+                {
+                    clearInterval( xinterval )
+                    xinterval = false
+                }
+                
+                ytime = xtime;
+                jQuery('#collectLeadModal').modal('hide')
+            }
+
+            return
         }
     </script>
 </body>
