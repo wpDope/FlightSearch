@@ -424,6 +424,27 @@ button.btn.call-now {
 }
 
 /*
+Footer
+*/
+section#offer-page {
+    padding-bottom: 100px;
+}
+.search-updater {
+    min-width: 100%;
+}
+.footer-number {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: #fff;
+    bottom: 0;
+    border-top: 2px solid var(--color-green);
+}
+.footer-number a {
+    color: var(--color-green);
+}
+
+/*
 Popup Bar
 */
 
@@ -454,6 +475,10 @@ Popup Bar
 Responsive style
 */
 @media screen and (max-width:768px) {
+
+    .header-phone span.number {
+        display: none;
+    }
     #offer-call-avatar a {
         background-position: center, center;
     }
