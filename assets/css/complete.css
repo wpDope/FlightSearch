@@ -122,9 +122,6 @@ Search Tav navigation
 /*
 Flight search form
 */
-/*
-Flight search form
-*/
 .flight-search label,
 .modal-footer label{
     color: var(--color-white);
@@ -148,22 +145,6 @@ Flight search form
     margin-top: -4px;
     margin-right: 5px;
 }
-
-/* .flight-search .field{
-    position: relative;
-}
-
-.flight-search select {
-    appearance: none;
-}
-
-.flight-search .field svg {
-    right: 12px;
-    position: absolute;
-    color: #464646;
-    top: 50%;
-    transform: translate(0, -50%);
-} */
 
 .select2-container--default .select2-selection--single {
     height: 50px;
@@ -342,7 +323,6 @@ Offer Page
     outline: none;
 }
 
-/*Style by shoyeb*/
 button.btn.call-now {
     color: var(--color-white);
     background: #5eb855;
@@ -515,21 +495,6 @@ Popup Bar
 }
 
 
-@keyframes jumper {
-	0% {
-		opacity: 0;
-		transform: scale(1);
-	}
-	5% {
-		opacity: 1;
-	}
-	to {
-		transform: scale(1.8);
-		opacity: 0;
-	}
-}
-
-
 /*
 Responsive style
 */
@@ -558,4 +523,22 @@ Responsive style
         margin-top: 0.6rem;
     }
     
+}
+
+
+/*
+Animation
+*/
+@keyframes jumper {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	5% {
+		opacity: 1;
+	}
+	to {
+		transform: scale(1.8);
+		opacity: 0;
+	}
 }
