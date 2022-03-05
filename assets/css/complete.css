@@ -14,10 +14,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    background-image: url(../images/background-2.jpg);
-    background-repeat: no-repeat;
-    background-color: #004981;
-    background-size: cover;
     color: var(--color-black);
 }
 
@@ -31,7 +27,7 @@ body::after {
     bottom: 0;
     z-index: -1;
     opacity: 0.5;
-}mn7mn7mn7
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: .5rem;
@@ -48,6 +44,7 @@ a{
     background-repeat: no-repeat;
     background-color: #004981;
     background-size: cover;
+    background-position: center center;
 }
 
 .bg::after {
@@ -499,6 +496,10 @@ Popup Bar
 Responsive style
 */
 @media screen and (max-width:768px) {
+
+    .bg{
+        background-size: auto;
+    }
 
     .header-phone span.number {
         display: none;
