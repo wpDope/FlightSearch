@@ -34,7 +34,7 @@
                     <nav class="navbar navbar-light">
                         <div class="container">
                             <a class="navbar-brand">Travel Booking</a>
-    
+
                             <a class="header-phone fs-4" href="tel:+123456789">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -203,19 +203,21 @@
                     <div id="top-search">
                         <div class="row mt-4">
                             <!-- Any Flight Input -->
-                            <div class="col-5">
-                                <input type="text" class="form-control ts-airlines airlines-name" placeholder="Any Airlines">
+                            <div class="col-lg-5 col-sm-12 mb-2">
+                                <input type="text" class="form-control ts-airlines airlines-name"
+                                    placeholder="Any Airlines">
                             </div>
 
                             <!-- Any Cabin Class Input -->
-                            <div class="col-6">
+                            <div class="col-lg-6 col-sm-12 mb-2">
                                 <input type="text" class="form-control ts-cabinclass cabinclass-name"
                                     placeholder="Any Cabin Class">
                             </div>
 
                             <!-- Submit Button -->
-                            <div class="col-1 text-end">
-                                <button class="btn btn-info search-updater" data-bs-toggle="modal" data-bs-target="#flightSearchModal">
+                            <div class="col-lg-1 text-end col-sm-12 mb-2">
+                                <button class="btn btn-info search-updater" data-bs-toggle="modal"
+                                    data-bs-target="#flightSearchModal">
                                     <!-- Pencil (Edit) Icon SVG -->
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -283,21 +285,21 @@
                                         <div id="offer-form-container" class="p-3">
                                             <form id="lead-onpage" action="">
                                                 <div class="row text-start">
-                                                    <div class="col-6 my-2">
+                                                    <div class="col-lg-6 col-sm-12 my-2">
                                                         <div class="field">
                                                             <label for="customer-name">Name *</label>
                                                             <input type="text" name="customer-name"
                                                                 class="form-control p-3" id="customer-name">
                                                         </div>
                                                     </div>
-                                                    <div class="col-6 my-2">
+                                                    <div class="col-lg-6 col-sm-12 my-2">
                                                         <div class="field">
                                                             <label for="customer-email">Email Address *</label>
                                                             <input type="text" name="customer-email"
                                                                 class="form-control p-3" id="customer-email">
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 my-2">
+                                                    <div class="col-lg-6 col-sm-12 my-2">
                                                         <div class="field">
                                                             <label for="customer-phone">Phone Number *</label>
                                                             <input type="tel" name="customer-phone"
@@ -315,7 +317,8 @@
 
                                         <!-- Call Features -->
                                         <div class="offer-call-features">
-                                            <ul class="d-inline-block p-3 d-sm-none text-start feature-list feature-list-mobile">
+                                            <ul
+                                                class="d-inline-block p-3 d-sm-none text-start feature-list feature-list-mobile">
                                                 <li>Guaranteed Cheap Prices from <span
                                                         class="text-red airlines-name">Any Airlines</span></li>
                                                 <li>Call Waiting Time: <span class="text-red">Near Zero</span></li>
@@ -336,7 +339,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-10 offset-1 text-center fs-5">
-                        <a href="tel:+1-888-808-0459">+1-888-808-0459</a>: Unpublished Flight Deals 
+                        <a href="tel:+1-888-808-0459">+1-888-808-0459</a>: Unpublished Flight Deals
                     </div>
                 </div>
             </div>
@@ -356,7 +359,8 @@
                     </div>
                     <div class="modal-body row">
                         <div class="col-md-6 col-sm-12 my-2">
-                            <select class="form-select form-select-lg" name="airlines" aria-label=".form-select-lg example">
+                            <select class="form-select form-select-lg" name="airlines"
+                                aria-label=".form-select-lg example">
                                 <option value="" selected>Any Airlines</option>
                                 <option value="QatarAirways">Qatar Airways</option>
                                 <option value="SingaporeAirlines">Singapore Airlines</option>
@@ -400,7 +404,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-header--left text-center">
-                        <span class="text-red h5">Time Is Running Out: <span class="dyn-minutes">00</span>:<span class="dyn-seconds">00</span></span>
+                        <span class="text-red h5">Time Is Running Out: <span class="dyn-minutes">00</span>:<span
+                                class="dyn-seconds">00</span></span>
                         <h5 class="modal-title" id="collectLeadModalLabel">Exclusive Deals For
                             Flights from <span class="airlines-name">Any Airlines</span> In Any Time
                         </h5>
@@ -414,19 +419,19 @@
                         flights from <span class="airlines-name">any airlines</span>. We call you in just 1 minute</p>
 
                     <div class="row text-start">
-                        <div class="col-6 my-2">
+                        <div class="col-lg-6 col-sm-12 my-2">
                             <div class="field">
                                 <label for="customer-name">Name *</label>
                                 <input type="text" name="customer-name" class="form-control p-3" id="customer-name">
                             </div>
                         </div>
-                        <div class="col-6 my-2">
+                        <div class="col-lg-6 col-sm-12 my-2">
                             <div class="field">
                                 <label for="customer-email">Email Address *</label>
                                 <input type="text" name="customer-email" class="form-control p-3" id="customer-email">
                             </div>
                         </div>
-                        <div class="col-6 my-2">
+                        <div class="col-lg-6 col-sm-12 my-2">
                             <div class="field">
                                 <label for="customer-phone">Phone Number *</label>
                                 <input type="tel" name="customer-phone" class="form-control p-3" id="customer-phone">
@@ -466,11 +471,11 @@
     <!-- This will go inside main.js later -->
     <script>
         // Timer for the popup
-        const xtime       = 120; // in seconds
-        const xpoptime    = 15; // in seconds
-        
-        const queries     = new URLSearchParams( window.location.search )
-        const xquery      = {
+        const xtime = 120; // in seconds
+        const xpoptime = 15; // in seconds
+
+        const queries = new URLSearchParams(window.location.search)
+        const xquery = {
             page: queries.get('page'),
             airlines: queries.get('airlines'),
             cabin: queries.get('cabin')
@@ -479,10 +484,9 @@
 
         var ytime = xtime, xtimeout, xinterval;
 
-        if ( isOfferPage )
-        {
-            jQuery('select[name="airlines"]').val( xquery.airlines )
-            jQuery('select[name="cabinclass"]').val( xquery.cabin )
+        if (isOfferPage) {
+            jQuery('select[name="airlines"]').val(xquery.airlines)
+            jQuery('select[name="cabinclass"]').val(xquery.cabin)
         }
         else
             jQuery('#main-page').show()
@@ -502,29 +506,27 @@
                 let input = jQuery(this)
                 let parent = input.parent()
 
-                if( input.val().trim().length !== 0 ) 
+                if (input.val().trim().length !== 0)
                     return false;
 
                 parent.removeClass('focused')
             })
 
             // Main Page Form Submission
-            jQuery('.flight-search').on('submit', function(e) {
+            jQuery('.flight-search').on('submit', function (e) {
                 e.preventDefault()
 
                 jQuery('#flightSearchModal, #collectLeadModal').modal('hide')
-                
+
                 ytime = xtime
-                
-                if ( xtimeout )
-                {
-                    clearTimeout( xtimeout )
+
+                if (xtimeout) {
+                    clearTimeout(xtimeout)
                     xtimeout = false
                 }
-                
-                if ( xinterval )
-                {
-                    clearInterval( xinterval )
+
+                if (xinterval) {
+                    clearInterval(xinterval)
                     xinterval = false
                 }
 
@@ -564,18 +566,17 @@
                 // Updating the url
                 window.history.pushState('offer-page', '', `?page=offer&airlines=${values.airlines}&cabin=${values.cabinclass}`)
 
-                if ( ! xtimeout )
-                {
+                if (!xtimeout) {
                     xcalctimer();
 
-                    xtimeout = setTimeout( () => {
+                    xtimeout = setTimeout(() => {
                         jQuery('#collectLeadModal').modal('show')
 
-                        if ( ! xinterval )
-                            xinterval = setInterval( xcalctimer, 1000 )
+                        if (!xinterval)
+                            xinterval = setInterval(xcalctimer, 1000)
 
                         xtimeout = false;
-                    }, (xpoptime * 1000) )
+                    }, (xpoptime * 1000))
                 }
 
                 return
@@ -585,15 +586,15 @@
             jQuery(document).on('click', '.ts-airlines, .ts-cabinclass', () => {
                 jQuery('#flightSearchModal').modal('show')
             })
-            
+
             // Offer Page Form and Modal Form Interchange Data
-            let leadFormPage  = jQuery('form#lead-onpage'),
+            let leadFormPage = jQuery('form#lead-onpage'),
                 leadFormModal = jQuery('#collectLeadModal')
 
             al_interchange(leadFormPage, leadFormModal)
             al_interchange(leadFormModal, leadFormPage)
 
-            if ( isOfferPage )
+            if (isOfferPage)
                 jQuery('.flight-search').submit()
         })
 
@@ -619,22 +620,20 @@
         }
 
         function xcalctimer() {
-            let tmin = Math.floor( ytime / 60 )
-            let tsec = ytime - ( tmin * 60 )
+            let tmin = Math.floor(ytime / 60)
+            let tsec = ytime - (tmin * 60)
 
-            jQuery('.dyn-minutes').text( tmin < 10 ? '0' + tmin.toString() : tmin.toString() )
-            jQuery('.dyn-seconds').text( tsec < 10 ? '0' + tsec.toString() : tsec.toString() )
+            jQuery('.dyn-minutes').text(tmin < 10 ? '0' + tmin.toString() : tmin.toString())
+            jQuery('.dyn-seconds').text(tsec < 10 ? '0' + tsec.toString() : tsec.toString())
 
             ytime--
 
-            if ( ytime < 0 )
-            {
-                if ( xinterval )
-                {
-                    clearInterval( xinterval )
+            if (ytime < 0) {
+                if (xinterval) {
+                    clearInterval(xinterval)
                     xinterval = false
                 }
-                
+
                 ytime = xtime;
                 jQuery('#collectLeadModal').modal('hide')
             }

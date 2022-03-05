@@ -451,10 +451,6 @@ Popup Bar
 .select2-container .select2-dropdown{
     z-index: 1056;
 }
-#collectLeadModal .modal-dialog,
-#flightSearchModal .modal-dialog {
-    /* max-width: 50rem; */
-}
 #collectLeadModal .modal-body,
 #flightSearchModal .modal-body {
     padding: 2rem;
@@ -485,4 +481,18 @@ Responsive style
     ul.feature-list-mobile {
         float: left;
     }
+    #offer-header{
+        padding: 1.5rem 0
+    }
+    #offer-caption{
+        padding-top: 1.5rem;
+    }
+    .flight-search .searchBtn{
+        width: 100%;
+    }
+    #collectLeadModal .modal-title{
+        font-size: 1.1rem;
+        margin-top: 0.6rem;
+    }
+    
 }
