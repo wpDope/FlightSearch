@@ -341,6 +341,7 @@ Offer Page
     overflow: visible;
     outline: none;
 }
+
 /*Style by shoyeb*/
 button.btn.call-now {
     color: var(--color-white);
@@ -372,7 +373,6 @@ button.btn.call-now {
     outline: 2px solid var(--color-blue);
 }
 
-/*Style by shoyeb*/
 .offer-input-container > fieldset {
     top: -5px;
     left: 0;
@@ -444,6 +444,53 @@ section#offer-page {
     color: var(--color-green);
 }
 
+.footer-number a.footer-close {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    color: var(--color-black);
+    transform: translate(0, -50%);
+}
+
+.floting-call-button {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+}
+
+.floting-call-button a {
+    height: 50px;
+    width: 50px;
+    background: var(--color-green);
+    color: var(--color-white);
+    padding: 20px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 25px;
+    position: relative;
+}
+
+.floting-call-button a:before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-green);
+    animation: jumper 1.8s ease-out 0s infinite;
+    -webkit-animation: jumper 1.8s ease-out 0s infinite;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+}
+
+.floting-call-button svg {
+    width: 22px;
+    height: 22px;
+    transform: rotate(-90deg) translate(9px, -5px);
+}
+
 /*
 Popup Bar
 */
@@ -466,6 +513,22 @@ Popup Bar
 #collectLeadModal .modal-header .modal-header--left{
     width: 90%;
 }
+
+
+@keyframes jumper {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	5% {
+		opacity: 1;
+	}
+	to {
+		transform: scale(1.8);
+		opacity: 0;
+	}
+}
+
 
 /*
 Responsive style
