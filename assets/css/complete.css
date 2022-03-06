@@ -134,7 +134,9 @@ Flight search form
     color: var( --color-white );
 }
 
-
+.flight-search .searchBtn{
+    border-radius: 1rem;
+}
 .modal-footer .searchBtn,
 .flight-search .searchBtn{
     border: 0;
@@ -510,7 +512,7 @@ Popup Bar
     width: var( --full-width );
 }
 #collectLeadModal .modal-header .modal-header--right{
-    width: 10%;
+    width: 5%;
     text-align: right;
 }
 #collectLeadModal .modal-header .modal-header--left{
@@ -520,6 +522,15 @@ Popup Bar
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
     color: #444;
+}
+
+#flightSearchModal .searchBtn{
+    margin-top:0 !important;
+    margin-bottom: 0 !important;
+}
+
+.flight-search .modal-header .modal-title{
+    margin-left: 20rem
 }
 
 
@@ -580,7 +591,7 @@ Responsive style
     #offer-form-above, ul.feature-list-mobile{
         padding-bottom: 0 !important;
     }
-    #offer-form-container, #offer-inner, ul.feature-list-mobile {
+    #offer-form-container, #offer-inner{
         padding-top: 0 !important
     }
     .offer-call-features li:last-child{
@@ -588,8 +599,14 @@ Responsive style
     }
     .modal-header .btn-close {
         position: absolute;
-        top: 0.9rem;
+        top: 1.5rem;
         right: 0.9rem;
+    }
+    #flightSearchModal button.my-4{
+        margin:0 !important
+    }
+    .flight-search .modal-header .modal-title{
+        margin-left: 5rem
     }
 }
 
