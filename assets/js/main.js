@@ -12,7 +12,7 @@ const isOfferPage = xquery.page != null && xquery.airlines != null && xquery.cab
 
 var ytime = xtime, xtimeout, xinterval;
 
-if (isOfferPage) {
+if ( isOfferPage ) {
     jQuery('select[name="airlines"]').val(xquery.airlines)
     jQuery('select[name="cabinclass"]').val(xquery.cabin)
 }
@@ -21,7 +21,19 @@ else
 
 jQuery(document).ready(() => {
     // Active select 2 fields
-    jQuery('.select2').select2({})
+    jQuery('.airlines-select').select2({
+        minimumInputLength: 1,
+        width: '100%'
+    })
+    jQuery('.cabin-select').select2({
+        minimumResultsForSearch: -1,
+        width: '100%'
+    })
+    jQuery('.airlines-select').on('select2:open', (e) => {
+        setTimeout(() => {
+            document.querySelector('.select2-search__field').focus();
+        }, 50)
+    });
 
     //close footer bar
     jQuery('.footer-close').on('click', (e) => {
@@ -81,6 +93,9 @@ jQuery(document).ready(() => {
         }
 
         // Updating content of offer page
+        jQuery('select[name="airlines"]').val(values.airlines)
+        jQuery('select[name="cabinclass"]').val(values.cabinclass)
+
         jQuery('input.airlines-name').val(labels.airlines)
         jQuery('.airlines-name:not(input)').text(labels.airlines)
 
