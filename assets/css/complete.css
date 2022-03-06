@@ -500,6 +500,7 @@ Popup Bar
 }
 #collectLeadModal .modal-header .modal-header--left{
     width: 90%;
+    margin-left: 4rem;
 }
 
 
@@ -520,12 +521,6 @@ Responsive style
     }
     ul.feature-list-mobile {
         float: left;
-    }
-    #offer-header{
-        padding: 1.5rem 0
-    }
-    #offer-caption{
-        padding-top: 1.5rem;
     }
     .flight-search .searchBtn{
         width: 100%;
@@ -553,7 +548,23 @@ Responsive style
     }
     #flightSearchModal .modal-title{
         font-size: 1.5rem;
-        margin-left: 10rem;
+    }
+    #collectLeadModal .modal-header .modal-header--left{
+        margin-left: auto;
+    }
+    #offer-form-above, ul.feature-list-mobile{
+        padding-bottom: 0 !important;
+    }
+    #offer-form-container, #offer-inner, ul.feature-list-mobile {
+        padding-top: 0 !important
+    }
+    .offer-call-features li:last-child{
+        margin-bottom: 0px;
+    }
+    .modal-header .btn-close {
+        position: absolute;
+        top: 0.9rem;
+        right: 0.9rem;
     }
 }
 
