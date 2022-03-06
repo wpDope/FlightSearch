@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family:"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -123,6 +123,17 @@ Flight search form
 .modal-footer label{
     color: var(--color-white);
 }
+
+.callBtn{
+    background-color: #303f9f;
+    color: var( --color-white );
+    text-transform: uppercase
+}
+.callBtn:hover{
+    background-color: #3f51b5;
+    color: var( --color-white );
+}
+
 
 .modal-footer .searchBtn,
 .flight-search .searchBtn{
@@ -475,10 +486,10 @@ Popup Bar
 .select2-container .select2-dropdown{
     z-index: 1056;
 }
-#collectLeadModal .modal-body,
+/* #collectLeadModal .modal-body,
 #flightSearchModal .modal-body {
     padding: 2rem;
-}
+} */
 #collectLeadModal .modal-footer .btn-lg,
 #flightSearchModal .modal-footer .btn-lg{
     width: var( --full-width );
@@ -520,10 +531,30 @@ Responsive style
         width: 100%;
     }
     #collectLeadModal .modal-title{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         margin-top: 0.6rem;
     }
-    
+    h2.airlines-name{
+        font-size: 2rem;
+    }
+    #offer-caption h3{
+        font-size: 1.75rem
+    }
+    .field label{
+        font-size: 17px;
+        font-weight: 400;
+    }
+    #collectLeadModal p.text-center{
+        font-weight: 500;
+    }
+    button.btn.call-now, .callBtn{
+        font-size: 20px!important;
+        font-weight: 500;
+    }
+    #flightSearchModal .modal-title{
+        font-size: 1.5rem;
+        margin-left: 10rem;
+    }
 }
 
 
