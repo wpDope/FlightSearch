@@ -126,8 +126,8 @@
                                                         for="select-airlines">Airlines</label>
 
                                                     <div class="field airlines">
-                                                        <select class="form-control p-2 select2" name="airlines"
-                                                            id="select-airlines">
+                                                        <select class="form-control p-2 airlines-select" name="airlines"
+                                                            id="select-airlines" data-placeholder="Typing...">
                                                             <option value="" selected>Any Airlines</option>
                                                             <option value="QatarAirways">Qatar Airways</option>
                                                             <option value="SingaporeAirlines">Singapore Airlines
@@ -146,13 +146,12 @@
                                                         Class</label>
 
                                                     <div class="field cabin-class">
-                                                        <select class="form-control p-2 select2" name="cabinclass"
+                                                        <select class="form-control p-2 cabin-select" name="cabinclass"
                                                             id="select-cabinclass">
-                                                            <option value="" selected>Any Class</option>
-                                                            <option value="Economic">Economic</option>
-                                                            <option value="Premium">Premium</option>
-                                                            <option value="Delux">Delux</option>
-                                                            <option value="vip">Vip</option>
+                                                            <option value="Economy" selected>Economy</option>
+                                                            <option value="PremiumEconomy">Premium Economy</option>
+                                                            <option value="Business">Business</option>
+                                                            <option value="FirstClass">First Class</option>
                                                         </select>
 
                                                     </div>
@@ -378,7 +377,7 @@
                     </div>
                     <div class="modal-body row">
                         <div class="col-md-6 col-sm-12 my-2">
-                            <select class="form-select form-select-lg" name="airlines"
+                            <select class="form-select form-select-lg airlines-select" name="airlines"
                                 aria-label=".form-select-lg example">
                                 <option value="" selected>Any Airlines</option>
                                 <option value="QatarAirways">Qatar Airways</option>
@@ -389,13 +388,12 @@
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-12 my-2">
-                            <select class="form-select form-select-lg" name="cabinclass"
+                            <select class="form-select form-select-lg cabin-select" name="cabinclass"
                                 aria-label=".form-select-lg example">
-                                <option value="" selected>Any Class</option>
-                                <option value="Economic">Economic</option>
-                                <option value="Premium">Premium</option>
-                                <option value="Delux">Delux</option>
-                                <option value="vip">Vip</option>
+                                <option value="Economy" selected>Economy</option>
+                                <option value="PremiumEconomy">Premium Economy</option>
+                                <option value="Business">Business</option>
+                                <option value="FirstClass">First Class</option>
                             </select>
                             <button class="btn px-4 py-2 my-4 fs-4 fw-bold searchBtn w-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
