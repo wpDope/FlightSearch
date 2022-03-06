@@ -124,13 +124,15 @@ Flight search form
     color: var(--color-white);
 }
 
-.callBtn{
+.callBtn {
     background-color: #303f9f;
     color: var( --color-white );
     text-transform: uppercase;
     margin-top: .5rem;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
 }
-.callBtn:hover{
+.callBtn:hover, .callBtn:focus{
+    outline: 0;
     background-color: #3f51b5;
     color: var( --color-white );
 }
@@ -584,6 +586,7 @@ Responsive style
     button.btn.call-now, .callBtn{
         font-size: 20px!important;
         font-weight: 500;
+        
     }
     #flightSearchModal .modal-title{
         font-size: 1.5rem;
