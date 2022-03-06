@@ -196,7 +196,7 @@ Offer Page
 #offer-content {
     font-weight: 700;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px #0009;
+    border: 2px dashed #7dd973;
 }
 
 #offer-header {
@@ -223,13 +223,24 @@ Offer Page
 }
 
 #offer-call-avatar a {
-    background-image: url('../images/call-circle.png');
+    background-image: url("../images/call.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     display: block;
-    text-indent: -999999px;
-    min-height: 80px;
+    min-height: 102px;
+    color: var(--color-white);
+    max-width: 350px;
+    padding-left: 24%;
+    text-align: center;
+    font-weight: 700;
+}
+
+#offer-call-avatar a h1 {
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 24px;
+    margin-bottom: 0;
 }
 
 #offer-call-avatar .info-text {
@@ -334,6 +345,8 @@ Offer Page
 button.btn.call-now {
     color: var(--color-white);
     background: #5eb855;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    font-size: 20px;
 }
 
 .field{
@@ -426,7 +439,8 @@ section#offer-page {
     right: 0;
     background: #fff;
     bottom: 0;
-    border-top: 2px solid var(--color-green);
+    border-top: 2px dashed var(--color-green);
+    padding: 19px 0;
 }
 .footer-number a {
     color: var(--color-green);
@@ -441,9 +455,10 @@ section#offer-page {
 }
 
 .floting-call-button {
-    position: fixed;
+    position: absolute;
     right: 14px;
-    bottom: 14px;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 .floting-call-button a {
@@ -519,6 +534,12 @@ Responsive style
     .header-phone span.number {
         display: none;
     }
+
+    #offer-call-avatar a h1 {
+        padding-top: 25px;
+        font-size: 22px;
+    }
+
     #offer-call-avatar a {
         background-position: center, center;
     }
