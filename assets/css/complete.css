@@ -127,7 +127,8 @@ Flight search form
 .callBtn{
     background-color: #303f9f;
     color: var( --color-white );
-    text-transform: uppercase
+    text-transform: uppercase;
+    margin-top: .5rem;
 }
 .callBtn:hover{
     background-color: #3f51b5;
@@ -503,10 +504,7 @@ Popup Bar
 .select2-container .select2-dropdown{
     z-index: 1056;
 }
-/* #collectLeadModal .modal-body,
-#flightSearchModal .modal-body {
-    padding: 2rem;
-} */
+
 #collectLeadModal .modal-footer .btn-lg,
 #flightSearchModal .modal-footer .btn-lg{
     width: var( --full-width );
@@ -530,7 +528,12 @@ Popup Bar
 }
 
 .flight-search .modal-header .modal-title{
-    margin-left: 20rem
+    margin-left: 20rem;
+    font-size: 1.5rem
+}
+#collectLeadModal .modal-body p{
+    font-weight: 500;
+    color: #212529;
 }
 
 
