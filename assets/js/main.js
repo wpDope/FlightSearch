@@ -22,7 +22,7 @@ else
 jQuery(document).ready(() => {
     // Active select 2 fields
     jQuery('.airlines-select').select2({
-        minimumInputLength: 1,
+        //minimumInputLength: 1,
         width: '100%'
     })
     jQuery('.cabin-select').select2({
