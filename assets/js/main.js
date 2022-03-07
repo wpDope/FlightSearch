@@ -1,3 +1,6 @@
+// Phone number
+const xphone = '+1-888-808-6969';
+
 // Timer for the popup
 const xtime = 120; // in seconds
 const xpoptime = 15; // in seconds
@@ -13,16 +16,22 @@ const isOfferPage = xquery.page != null && xquery.airlines != null && xquery.cab
 var ytime = xtime, xtimeout, xinterval;
 
 if ( isOfferPage ) {
-    jQuery('select[name="airlines"]').val(xquery.airlines)
-    jQuery('select[name="cabinclass"]').val(xquery.cabin)
+    if ( jQuery('select[name="airlines"]').find('option[value="' + xquery.airlines + '"]').length > 0)
+        jQuery('select[name="airlines"]').val( xquery.airlines )
+
+    if ( jQuery('select[name="cabinclass"]').find('option[value="' + xquery.cabin + '"]').length > 0)
+        jQuery('select[name="cabinclass"]').val( xquery.cabin )
 }
 else
     jQuery('#main-page').show()
 
 jQuery(document).ready(() => {
+    // Update phone number everywhere
+    jQuery('.phone-number').text( xphone )
+    jQuery('.phone-number-link').attr( 'href', `tel:${xphone}` )
+
     // Active select 2 fields
     jQuery('.airlines-select').select2({
-        //minimumInputLength: 1,
         width: '100%'
     })
     jQuery('.cabin-select').select2({
@@ -92,10 +101,6 @@ jQuery(document).ready(() => {
             cabinclass: cabinclass.find(':selected').text()
         }
 
-        // Updating content of offer page
-        jQuery('select[name="airlines"]').val(values.airlines)
-        jQuery('select[name="cabinclass"]').val(values.cabinclass)
-
         jQuery('input.airlines-name').val(labels.airlines)
         jQuery('.airlines-name:not(input)').text(labels.airlines)
 
@@ -129,11 +134,6 @@ jQuery(document).ready(() => {
         }
 
         return
-    })
-
-    // Offer Page Top Search Events
-    jQuery(document).on('click', '.ts-airlines, .ts-cabinclass', () => {
-        jQuery('#flightSearchModal').modal('show')
     })
 
     // Offer Page Form and Modal Form Interchange Data
